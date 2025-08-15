@@ -1,119 +1,192 @@
-
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darina Design Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-style: italic;
-      color: #ccc;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services, .portfolio {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #222;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .gallery img {
-      width: 300px;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .contact {
-      background: #f8f8f8;
-      padding: 2rem;
-      text-align: center;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #0055aa;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VNDPrime Studio — Design & Web</title>
+  <meta name="description" content="VNDPrime Studio — boutique design & web studio crafting brands, websites, and digital assets." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">
+        <img src="assets/logo-mark.svg" alt="VNDPrime logo" />
+        <span>VNDPrime Studio</span>
+      </a>
+      <nav id="nav" class="nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-small">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<header>
-  <h1>Darina Design</h1>
-  <p>UI/UX • Web Design • Canva Templates • Branding</p>
-</header>
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Sharp brands. Fast websites. Real results.</h1>
+        <p>We craft <strong>brand identities</strong>, <strong>websites</strong>, and <strong>ad creatives</strong> that actually move the needle. Boutique studio working with startups and solo founders worldwide.</p>
+        <div class="cta-row">
+          <a href="#work" class="btn">See selected work</a>
+          <a href="#contact" class="link">Get a free audit →</a>
+        </div>
+        <div class="stats">
+          <div><span>24h</span><label>Express turnarounds*</label></div>
+          <div><span>300+</span><label>Design assets delivered</label></div>
+          <div><span>10/10</span><label>Client satisfaction</label></div>
+        </div>
+        <p class="disclaimer">*For small website fixes and ad banner packs.</p>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero-mock.svg" alt="Website & brand mockups" />
+      </div>
+    </section>
 
-<section class="intro">
-  <h2>Здравей! 👋</h2>
-  <p>Аз съм Дарина – креативен дизайнер, който помага на брандове и проекти да се открояват онлайн. Специализирам в създаването на визуално въздействащи уебсайтове, потребителски интерфейси, шаблони за Canva и бранд идентичности.</p>
-</section>
+    <section id="work" class="work container">
+      <div class="section-head">
+        <h2>Selected work (spec & demo projects)</h2>
+        <p class="muted">These are demonstration case studies to showcase style and capability.</p>
+      </div>
+      <div class="grid cards">
+        <a class="card" href="case-study.html">
+          <img src="assets/case-1.svg" alt="Case study 1" />
+          <div class="card-body">
+            <h3>RootheShop — ecommerce brand kit</h3>
+            <p>Logo, color system, product thumbnails, and a high‑converting landing page layout.</p>
+            <span class="pill">Spec project</span>
+          </div>
+        </a>
+        <a class="card" href="case-study.html">
+          <img src="assets/case-2.svg" alt="Case study 2" />
+          <div class="card-body">
+            <h3>VNDPrime — web revamp concept</h3>
+            <p>Fast, responsive one‑pager with clear services, social proof, and lead capture.</p>
+            <span class="pill">Demo</span>
+          </div>
+        </a>
+        <a class="card" href="case-study.html">
+          <img src="assets/case-3.svg" alt="Case study 3" />
+          <div class="card-body">
+            <h3>WorkToGodMode — banner system</h3>
+            <p>Ad banner set for TikTok/Meta with modular headline and CTA variants.</p>
+            <span class="pill">Spec project</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
-<section class="services">
-  <h2>Услуги / Services</h2>
-  <ul>
-    <li>🎨 Уеб дизайн и редизайн</li>
-    <li>📱 UI/UX за мобилни и уеб приложения</li>
-    <li>📐 Шаблони за Canva и социални мрежи</li>
-    <li>🏷️ Визуална идентичност и брандинг</li>
-    <li>🖼️ Постери, банери и дигитални материали</li>
-  </ul>
-</section>
+    <section id="services" class="services container">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p class="muted">Pick a package or mix & match. No fluff.</p>
+      </div>
+      <div class="grid three">
+        <div class="service">
+          <h3>Brand Starter</h3>
+          <p>Logo, color palette, typography, and quick brand guide (PDF).</p>
+          <ul>
+            <li>3 logo concepts, 2 revisions</li>
+            <li>Social avatar & banner</li>
+            <li>Delivery in 72h</li>
+          </ul>
+        </div>
+        <div class="service">
+          <h3>Launch Website</h3>
+          <p>One‑page site optimized for speed and clarity. Host anywhere.</p>
+          <ul>
+            <li>Responsive layout</li>
+            <li>Copy assist included</li>
+            <li>Basic SEO setup</li>
+          </ul>
+        </div>
+        <div class="service">
+          <h3>Ad Creative Pack</h3>
+          <p>A/B‑ready banner & video thumbnails for Meta, TikTok, Google.</p>
+          <ul>
+            <li>Static + animated options</li>
+            <li>Editable source files</li>
+            <li>Delivery in 48–72h</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="portfolio">
-  <h2>Портфолио / Portfolio</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x200.png?text=UI+Design+1" alt="Design sample"><img src="https://via.placeholder.com/300x200.png?text=Website+Mockup" alt="Design sample"><img src="https://via.placeholder.com/300x200.png?text=Canva+Template" alt="Design sample"><img src="https://via.placeholder.com/300x200.png?text=Brand+Identity" alt="Design sample"><img src="https://via.placeholder.com/300x200.png?text=Poster+Design" alt="Design sample">
-  </div>
-</section>
+    <section id="about" class="about container">
+      <div class="section-head">
+        <h2>About the studio</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>VNDPrime Studio is a compact, independent design shop focused on velocity and clarity. We value clean systems, fast feedback loops, and honest communication.</p>
+          <p class="muted">Tools we use: Figma, Illustrator, Affinity, Framer/Typedream, BigCartel, Lemon Squeezy, and lightweight static stacks.</p>
+        </div>
+        <ul class="checklist">
+          <li>Same‑day kickoff</li>
+          <li>Transparent pricing</li>
+          <li>Source files included</li>
+          <li>Asynchronous friendly</li>
+        </ul>
+      </div>
+    </section>
 
-<section class="contact">
-  <h2>Контакт / Contact</h2>
-  <p>Имаш нужда от дизайнер? Пишете ми на:</p>
-  <p><a href="mailto:Therinadesign@gmail.com">Therinadesign@gmail.com</a></p>
-</section>
+    <section id="contact" class="contact container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Request a quote or a free mini‑audit (homepage + brand critique).</p>
+      </div>
+      <div class="contact-card">
+        <form action="mailto:hello@vndprime.example" method="post" enctype="text/plain">
+          <div class="grid two">
+            <label>Full name
+              <input type="text" name="name" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" required>
+            </label>
+          </div>
+          <label>What do you need?
+            <select name="package">
+              <option>Brand Starter</option>
+              <option>Launch Website</option>
+              <option>Ad Creative Pack</option>
+              <option>Something custom</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" rows="4" placeholder="Tell us about your project…"></textarea>
+          </label>
+          <div class="cta-row">
+            <button class="btn" type="submit">Send inquiry</button>
+            <a class="link" href="mailto:hello@vndprime.example">Or email directly →</a>
+          </div>
+        </form>
+      </div>
+      <p class="tiny muted">By contacting us you agree to our simple terms: clear scope, transparent timelines, and honest feedback.</p>
+    </section>
+  </main>
 
-<footer>
-  <p><a href="terms.html">Terms & Conditions</a> | <a href="refund.html">Refund Policy</a></p>
-  <p>&copy; 2025 Darina Design. All rights reserved.</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/logo-mark.svg" alt="" />
+        <span>VNDPrime Studio</span>
+      </div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="legal">© <span id="year"></span> VNDPrime. All rights reserved.</div>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
